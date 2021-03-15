@@ -17,3 +17,33 @@ nav{
 .githubLogo svg{
     fill: white;
 }
+.searchInput{
+    background-color: #0D1117;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    position: relative;
+    border-radius: 10px;
+}
+.searchInput input{
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    height: 100%;
+    width: 270px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: width 0.3s linear;
+}
+.searchInput input:focus {
+    border: 1px solid #388BFD;
+    width: 500px;
+}
+
+.searchInput img{
+    position: absolute;
+    z-index: 10;
+    right: 10px;
+}
