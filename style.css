@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    min-height: 100vh;
+}
 .container{
     display: flex;
+    flex-direction: column;
 }
 nav{
     display: flex;
@@ -46,4 +51,87 @@ nav{
     position: absolute;
     z-index: 10;
     right: 10px;
+}
+.navLink a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Roboto";
+    margin-left: 15px;
+}
+.navLink a:hover{
+    color: gray;
+}
+
+.navRight{
+    margin:0px 0px 0px auto;
+    display: flex;
+    flex-direction: row;
+}
+.notification{
+    margin-right: 15px;
+}
+.notification svg{
+    fill: white;
+}
+.navActionMenu{
+    margin-right: 15px;
+    position: relative;
+}
+.navActionMenu > summary::-webkit-details-marker {
+    display: none;
+}
+.navActionMenu svg{
+    fill: white;
+}
+nav .fa-arrow-down{
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+}
+.navActionMenu ul,
+.navProfileAvatar ul{
+    position: absolute;
+    z-index: 100;
+    right: -20px;
+    margin: 5px 0px;
+    width: max-content;
+    list-style: none;
+    background-color: #21262D;
+    color: white;
+    border-radius: 10px;
+}
+.navActionMenu ul:after,
+.navProfileAvatar ul:after {
+	bottom: 100%;
+	right: 20px;
+	border: solid transparent;
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #21262D;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.navActionMenu ul li,
+.navProfileAvatar ul li{
+    padding: 10px;
+}
+.navActionMenu ul li:hover,
+.navProfileAvatar ul li:hover{
+    background-color: #388BFD;
+}
+.navProfileAvatar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navProfileAvatar > summary::-webkit-details-marker{
+    display: none;
+}
+.navProfileAvatar img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }
