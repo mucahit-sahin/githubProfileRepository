@@ -282,13 +282,12 @@ nav .fa-arrow-down{
     border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    padding: 15px 0px;
+    padding: 25px 0px;
 }
 .repositoryHeader{
     display: flex;
     flex-direction: row;
     flex: 1;
-
 }
 .repositoryHeader> span{
     color: var(--blue);
@@ -314,9 +313,9 @@ nav .fa-arrow-down{
 .repositoryDescription{
     color:#8b949e;
     font-size: 14px;
-    margin: 10px 0px;
 }
 .repositoryInfo{
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     color: #8b949e;
