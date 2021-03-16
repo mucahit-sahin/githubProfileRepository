@@ -2,9 +2,11 @@ var closePanel = document.createElement("div");
 closePanel.style.display = "none";
 closePanel.style.background = "transparent";
 closePanel.style.position = "absolute";
+closePanel.style.left = 0;
+closePanel.style.top = 0;
 closePanel.style.width = "100vw";
 closePanel.style.height = "100vh";
-closePanel.style.zIndex = 10;
+closePanel.style.zIndex = 20;
 
 var container = document.querySelector(".container");
 container.appendChild(closePanel);

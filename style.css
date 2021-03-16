@@ -3,6 +3,7 @@
     --main-bg-color:#0D1117;
     --nav-bg-color:#161B22;
     --blue:#388BFD;
+    --border-color:#21262D;
 }
 
 *{
@@ -153,6 +154,7 @@ nav .fa-arrow-down{
     flex: 0.2;
     display: flex;
     flex-direction: column;
+    padding: 0px 15px;
 }
 .profileBio img{
     width: 100%;
@@ -205,6 +207,9 @@ nav .fa-arrow-down{
     color: #C9D1D9;
     border-bottom: 0.5px solid #21262D;
 }
+.highlights span:nth-child(1){
+    font-size: 20px;
+}
 .highlights svg{
     fill: white;
     margin-right: 5px;
@@ -219,6 +224,109 @@ nav .fa-arrow-down{
     width: min-content;
     padding: 5px;
 }
-.profileRepos{
+.profileReposCol{
     flex: 0.8;
+    margin-top: 15px;
+    padding: 0px 15px;
+}
+.profileReposColHeader{
+    display: flex;
+    flex-direction: row;
+}
+.profileReposColHeader input{
+    flex: 0.6;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #21262D;
+    outline: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+.profileReposColHeader input:focus{
+    border: 3px solid var(--blue);
+}
+.profileReposColHeader details{
+    flex: 0.2;
+    background-color: #21262D;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.profileReposColHeader details summary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    outline:none;
+}
+.profileReposColHeader details summary::-webkit-details-marker{
+    display: none;
+}
+.profileReposColHeader div{
+    flex: 0.2;
+    background-color: #238636;
+    margin-right: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.profileRepositories{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.repository{
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+}
+.repositoryHeader{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+}
+.repositoryHeader> span{
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 600;
+}
+.repositoryHeader> span:hover{
+    text-decoration: underline;
+}
+.repositoryHeader div{
+    color: white;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0px;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+.repositoryHeader div svg{
+    fill: white;
+}
+.repositoryDescription{
+    color:#8b949e;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+.repositoryInfo{
+    display: flex;
+    flex-direction: row;
+    color: #8b949e;
+    font-size: 12px;
+}
+.programLang{
+    margin-right: 20px;
+}
+.programLang> span:nth-child(1){
+    background-color: var(--blue);
+    width: 5px;
+    height: 5px;
 }
