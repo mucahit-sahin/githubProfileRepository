@@ -241,6 +241,7 @@ nav .fa-arrow-down{
     outline: none;
     background-color: transparent;
     margin-right: 10px;
+    color: white;
 }
 .profileReposColHeader input:focus{
     border: 3px solid var(--blue);
