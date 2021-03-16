@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root{
+    --main-bg-color:#0D1117;
+    --nav-bg-color:#161B22;
+    --blue:#388BFD;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,10 +12,8 @@
 }
 body{
     min-height: 100vh;
-}
-.container{
-    display: flex;
-    flex-direction: column;
+    background-color: var(--main-bg-color);
+    overflow-x: hidden;
 }
 nav{
     display: flex;
@@ -17,13 +21,13 @@ nav{
     align-items: center;
     flex: 1;
     padding: 10px 40px 10px 30px;
-    background-color: #161B22;
+    background-color: var(--nav-bg-color);
 }
 .githubLogo svg{
     fill: white;
 }
 .searchInput{
-    background-color: #0D1117;
+    background-color: var(--main-bg-color);
     display: flex;
     align-items: center;
     margin-left: 15px;
@@ -43,7 +47,7 @@ nav{
     transition: width 0.3s linear;
 }
 .searchInput input:focus {
-    border: 1px solid #388BFD;
+    border: 1px solid var(--blue);
     width: 500px;
 }
 
@@ -120,7 +124,7 @@ nav .fa-arrow-down{
 }
 .navActionMenu ul li:hover,
 .navProfileAvatar ul li:hover{
-    background-color: #388BFD;
+    background-color: var(--blue);
 }
 .navProfileAvatar{
     display: flex;
@@ -134,4 +138,87 @@ nav .fa-arrow-down{
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+
+/*content*/
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 1250px;
+    margin: 0px auto;
+}
+.profileBio{
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+}
+.profileBio img{
+    width: 100%;
+    border-radius: 50%;
+}
+.profileBioUsername{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #8b949e;
+    font-weight: 300;
+}
+.editProfileButton{
+    background-color: #21262D;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+    font-weight: 500;
+}
+.profileFollow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #C9D1D9;
+    margin-top: 15px;
+}
+.profileFollow svg{
+    fill: #8B949E;
+}
+.profileLinks{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    color: #C9D1D9;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.5px solid #21262D;
+}
+.profileLinks svg{
+    fill: white;
+    margin-right: 5px;
+}
+.highlights{
+    margin-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    color: #C9D1D9;
+    border-bottom: 0.5px solid #21262D;
+}
+.highlights svg{
+    fill: white;
+    margin-right: 5px;
+}
+.highlights >div{
+    display: flex;
+    align-items: center;
+}
+.highlights >div>span{
+    border: 1px solid #21262D;
+    border-radius: 10px;
+    width: min-content;
+    padding: 5px;
+}
+.profileRepos{
+    flex: 0.8;
 }
