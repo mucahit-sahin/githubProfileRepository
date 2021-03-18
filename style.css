@@ -154,6 +154,46 @@ nav .fa-arrow-down {
   border-radius: 50%;
 }
 
+/*Tabs*/
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  color: #8b949e;
+  border-bottom: 0.5px solid #21262d;
+  margin-top: 30px;
+}
+.tabs > div:nth-child(1) {
+  flex: 0.3;
+  padding: 0px 15px;
+}
+.tabs > div:nth-child(2) {
+  flex: 0.7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tabsItem {
+  margin-right: 10px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
+.tabsItem:hover {
+  border-bottom: 3px solid gray;
+}
+.tabsItem.active {
+  border-bottom: 3px solid #f9826c;
+}
+.tabsItem svg {
+  fill: white;
+  margin-right: 5px;
+}
+.content .tabs {
+  display: none;
+}
 /*content*/
 
 .content {
@@ -168,6 +208,7 @@ nav .fa-arrow-down {
   display: flex;
   flex-direction: column;
   padding: 0px 15px;
+  margin-top: -50px;
 }
 .profileBio img {
   width: 100%;
@@ -196,9 +237,13 @@ nav .fa-arrow-down {
   align-items: center;
   color: #c9d1d9;
   margin-top: 15px;
+  font-size: 14px;
 }
 .profileFollow svg {
   fill: #8b949e;
+}
+.profileFollow span {
+  color: white;
 }
 .profileLinks {
   margin-top: 15px;
@@ -209,8 +254,14 @@ nav .fa-arrow-down {
   border-bottom: 0.5px solid #21262d;
 }
 .profileLinks svg {
-  fill: white;
+  fill: #c9d1d9;
   margin-right: 5px;
+}
+.profileLinks span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 .highlights {
   margin-top: 15px;
@@ -222,6 +273,13 @@ nav .fa-arrow-down {
 }
 .highlights span:nth-child(1) {
   font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.highlights span:nth-child(2) {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 .highlights svg {
   fill: white;
@@ -230,12 +288,15 @@ nav .fa-arrow-down {
 .highlights > div {
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 .highlights > div > span {
-  border: 1px solid #21262d;
+  border: 1px solid #8957e5;
   border-radius: 10px;
   width: min-content;
-  padding: 5px;
+  padding: 0px 5px;
+  font-size: 12px;
+  color: #8957e5;
 }
 .profileReposCol {
   flex: 0.75;
@@ -324,14 +385,18 @@ nav .fa-arrow-down {
   margin-left: auto;
   margin-right: 0px;
   padding: 5px 15px;
+  height: 25px;
+  width: 70px;
   border-radius: 10px;
+  font-size: 12px;
 }
 .repositoryHeader div svg {
-  fill: white;
+  fill: #8b949e;
 }
 .repositoryDescription {
   color: #8b949e;
   font-size: 14px;
+  max-width: 500px;
 }
 .repositoryInfo {
   margin-top: 15px;
@@ -428,6 +493,9 @@ nav .fa-arrow-down {
   .content {
     flex-direction: column;
   }
+  .profileBio {
+    margin-top: 0px;
+  }
   .profileBio div:nth-child(1) {
     display: flex;
     flex-direction: row;
@@ -453,5 +521,15 @@ nav .fa-arrow-down {
     margin-left: auto;
     padding: 5px;
     font-size: 14px;
+  }
+  .repositoryHeader > a {
+    max-width: 200px;
+  }
+  .container > .tabs {
+    display: none;
+  }
+  .content .tabs {
+    display: flex;
+    overflow-x: scroll;
   }
 }
