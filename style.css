@@ -1,332 +1,443 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-:root{
-    --main-bg-color:#0D1117;
-    --nav-bg-color:#161B22;
-    --blue:#388BFD;
-    --border-color:#21262D;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  --main-bg-color: #0d1117;
+  --nav-bg-color: #161b22;
+  --blue: #388bfd;
+  --border-color: #21262d;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto";
 }
-body{
-    min-height: 100vh;
-    background-color: var(--main-bg-color);
-    overflow-x: hidden;
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+  overflow-x: hidden;
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 1;
-    padding: 10px 40px 10px 30px;
-    background-color: var(--nav-bg-color);
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  padding: 10px 40px 10px 30px;
+  background-color: var(--nav-bg-color);
 }
-.githubLogo svg{
-    fill: white;
+.mobileMenu {
+  display: none;
 }
-.searchInput{
-    background-color: var(--main-bg-color);
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    position: relative;
-    border-radius: 10px;
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100vw;
+  height: max-content;
+  background-color: #161b22;
 }
-.searchInput input{
-    background-color: transparent;
-    color: white;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    height: 100%;
-    width: 270px;
-    border-radius: 10px;
-    padding: 5px 10px;
-    transition: width 0.3s linear;
+.githubLogo svg {
+  fill: white;
+}
+.searchInput {
+  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  position: relative;
+  border-radius: 10px;
+}
+.searchInput input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 100%;
+  width: 270px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: width 0.3s linear;
 }
 .searchInput input:focus {
-    border: 1px solid var(--blue);
-    width: 500px;
+  border: 1px solid var(--blue);
+  width: 500px;
 }
 
-.searchInput img{
-    position: absolute;
-    z-index: 10;
-    right: 10px;
+.searchInput img {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
 }
-.navLink a{
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: "Roboto";
-    margin-left: 15px;
+.navLink a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Roboto";
+  margin-left: 15px;
 }
-.navLink a:hover{
-    color: gray;
+.navLink a:hover {
+  color: gray;
 }
 
-.navRight{
-    margin:0px 0px 0px auto;
-    display: flex;
-    flex-direction: row;
+.navRight {
+  margin: 0px 0px 0px auto;
+  display: flex;
+  flex-direction: row;
 }
-.notification{
-    margin-right: 15px;
+.notification {
+  margin-right: 15px;
 }
-.notification svg{
-    fill: white;
+.notification svg {
+  fill: white;
 }
-.navActionMenu{
-    margin-right: 15px;
-    position: relative;
+.navActionMenu {
+  margin-right: 15px;
+  position: relative;
 }
 .navActionMenu > summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
-.navActionMenu svg{
-    fill: white;
+.navActionMenu svg {
+  fill: white;
 }
-nav .fa-arrow-down{
-    color: white;
-    font-size: 12px;
-    font-weight: normal;
+nav .fa-arrow-down {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
 }
 .navActionMenu ul,
-.navProfileAvatar ul{
-    position: absolute;
-    z-index: 100;
-    right: -20px;
-    margin: 5px 0px;
-    width: max-content;
-    list-style: none;
-    background-color: #21262D;
-    color: white;
-    border-radius: 10px;
+.navProfileAvatar ul {
+  position: absolute;
+  z-index: 100;
+  right: -20px;
+  margin: 5px 0px;
+  width: max-content;
+  list-style: none;
+  background-color: #21262d;
+  color: white;
+  border-radius: 10px;
 }
 .navActionMenu ul:after,
 .navProfileAvatar ul:after {
-	bottom: 100%;
-	right: 20px;
-	border: solid transparent;
-	content: "";
-	position: absolute;
-	pointer-events: none;
-	border-bottom-color: #21262D;
-	border-width: 10px;
-	margin-left: -10px;
+  bottom: 100%;
+  right: 20px;
+  border: solid transparent;
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #21262d;
+  border-width: 10px;
+  margin-left: -10px;
 }
 .navActionMenu ul li,
-.navProfileAvatar ul li{
-    padding: 10px;
+.navProfileAvatar ul li {
+  padding: 10px;
 }
 .navActionMenu ul li:hover,
-.navProfileAvatar ul li:hover{
-    background-color: var(--blue);
+.navProfileAvatar ul li:hover {
+  background-color: var(--blue);
 }
-.navProfileAvatar{
-    display: flex;
-    align-items: center;
-    position: relative;
+.navProfileAvatar {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.navProfileAvatar > summary::-webkit-details-marker{
-    display: none;
+.navProfileAvatar > summary::-webkit-details-marker {
+  display: none;
 }
-.navProfileAvatar img{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.navProfileAvatar img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 /*content*/
 
-.content{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    max-width: 1250px;
-    margin: 0px auto;
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  max-width: 1250px;
+  margin: 10px auto;
 }
-.profileBio{
-    flex: 0.2;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 15px;
+.profileBio {
+  flex: 0.25;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
 }
-.profileBio img{
-    width: 100%;
-    border-radius: 50%;
+.profileBio img {
+  width: 100%;
+  border-radius: 50%;
 }
-.profileBioUsername{
-    margin-top: 15px;
-    font-size: 20px;
-    color: #8b949e;
-    font-weight: 300;
+.profileBioUsername {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #8b949e;
+  font-weight: 300;
 }
-.editProfileButton{
-    background-color: #21262D;
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-    border: none;
-    margin-top: 15px;
-    font-weight: 500;
+.editProfileButton {
+  background-color: #21262d;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+  font-weight: 500;
 }
-.profileFollow{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #C9D1D9;
-    margin-top: 15px;
+.profileFollow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #c9d1d9;
+  margin-top: 15px;
 }
-.profileFollow svg{
-    fill: #8B949E;
+.profileFollow svg {
+  fill: #8b949e;
 }
-.profileLinks{
-    margin-top: 15px;
-    padding-bottom: 15px;
-    color: #C9D1D9;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 0.5px solid #21262D;
+.profileLinks {
+  margin-top: 15px;
+  padding-bottom: 15px;
+  color: #c9d1d9;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.5px solid #21262d;
 }
-.profileLinks svg{
-    fill: white;
-    margin-right: 5px;
+.profileLinks svg {
+  fill: white;
+  margin-right: 5px;
 }
-.highlights{
-    margin-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    color: #C9D1D9;
-    border-bottom: 0.5px solid #21262D;
+.highlights {
+  margin-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  color: #c9d1d9;
+  border-bottom: 0.5px solid #21262d;
 }
-.highlights span:nth-child(1){
-    font-size: 20px;
+.highlights span:nth-child(1) {
+  font-size: 20px;
 }
-.highlights svg{
-    fill: white;
-    margin-right: 5px;
+.highlights svg {
+  fill: white;
+  margin-right: 5px;
 }
-.highlights >div{
-    display: flex;
-    align-items: center;
+.highlights > div {
+  display: flex;
+  align-items: center;
 }
-.highlights >div>span{
-    border: 1px solid #21262D;
-    border-radius: 10px;
-    width: min-content;
-    padding: 5px;
+.highlights > div > span {
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  width: min-content;
+  padding: 5px;
 }
-.profileReposCol{
-    flex: 0.8;
-    margin-top: 15px;
-    padding: 0px 15px;
+.profileReposCol {
+  flex: 0.75;
+  margin-top: 15px;
+  padding: 0px 15px;
 }
-.profileReposColHeader{
-    display: flex;
-    flex-direction: row;
+.profileReposColHeader {
+  display: flex;
+  flex-direction: row;
 }
-.profileReposColHeader input{
-    flex: 0.6;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid #21262D;
-    outline: none;
-    background-color: transparent;
-    margin-right: 10px;
-    color: white;
+.profileReposColHeader input {
+  flex: 0.6;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #21262d;
+  outline: none;
+  background-color: transparent;
+  margin-right: 10px;
+  color: white;
 }
-.profileReposColHeader input:focus{
-    border: 3px solid var(--blue);
+.profileReposColHeader input:focus {
+  border: 3px solid var(--blue);
 }
-.profileReposColHeader details{
-    flex: 0.2;
-    background-color: #21262D;
-    margin-right: 10px;
-    border-radius: 10px;
-    color: white;
+.profileReposColHeader details {
+  flex: 0.4;
+  background-color: #21262d;
+  margin-right: 10px;
+  border-radius: 10px;
+  color: white;
 }
-.profileReposColHeader details summary{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    outline:none;
+.profileReposColHeader details summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  outline: none;
 }
-.profileReposColHeader details summary::-webkit-details-marker{
+.profileReposColHeader details summary::-webkit-details-marker {
+  display: none;
+}
+.profileReposColHeader div {
+  flex: 0.6;
+  display: flex;
+  flex-direction: row;
+}
+.profileReposColHeader .new {
+  flex: 0.3;
+  background-color: #238636;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.profileRepositories {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.repository {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0px;
+}
+.repositoryHeader {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.repositoryHeader > a {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.repositoryHeader > a:hover {
+  text-decoration: underline;
+}
+.repositoryHeader div {
+  color: white;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.repositoryHeader div svg {
+  fill: white;
+}
+.repositoryDescription {
+  color: #8b949e;
+  font-size: 14px;
+}
+.repositoryInfo {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  color: #8b949e;
+  font-size: 12px;
+}
+.programLang {
+  margin-right: 20px;
+}
+.programLang > span:nth-child(1) {
+  background-color: var(--blue);
+  width: 5px;
+  height: 5px;
+}
+@media (min-width: 0px) and (max-width: 800px) {
+  nav {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+  }
+  .navLink,
+  nav > .searchInput,
+  .navActionMenu,
+  .navProfileAvatar {
     display: none;
-}
-.profileReposColHeader div{
-    flex: 0.2;
-    background-color: #238636;
+  }
+  .mobileMenu {
+    flex: 0.3;
+    display: block;
+  }
+  .mobileMenu button {
+    background-color: transparent;
+    border: none;
+  }
+  .mobileMenu .fas {
+    color: white;
+    font-size: 23px;
+  }
+  .menu.active {
+    display: block;
+  }
+  .menu ul {
+    list-style: none;
+    color: white;
+    padding: 10px;
     margin-right: 10px;
-    border-radius: 10px;
+  }
+  .menu .searchInput {
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .menu .searchInput input {
+    width: 100%;
+  }
+  .menu .searchInput input:focus {
+    width: 100%;
+  }
+  .menu ul li {
+    padding: 10px 0px;
+    border-top: 0.5px solid var(--border-color);
+  }
+  .githubLogo {
+    flex: 0.4;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-}
-.profileRepositories{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-.repository{
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    padding: 25px 0px;
-}
-.repositoryHeader{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-.repositoryHeader> span{
-    color: var(--blue);
-    font-size: 20px;
-    font-weight: 600;
-}
-.repositoryHeader> span:hover{
-    text-decoration: underline;
-}
-.repositoryHeader div{
-    color: white;
-    border: 1px solid var(--border-color);
-    display: flex;
+  }
+  .navRight {
+    flex: 0.3;
     align-items: center;
-    margin-left: auto;
+    justify-content: flex-end;
+  }
+  .navRight .notification {
     margin-right: 0px;
-    padding: 5px 15px;
-    border-radius: 10px;
-}
-.repositoryHeader div svg{
-    fill: white;
-}
-.repositoryDescription{
-    color:#8b949e;
-    font-size: 14px;
-}
-.repositoryInfo{
-    margin-top: 15px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .profileBio div:nth-child(1) {
     display: flex;
     flex-direction: row;
-    color: #8b949e;
-    font-size: 12px;
-}
-.programLang{
+    align-items: center;
+  }
+  .profileBio div:nth-child(1) img {
+    width: 68px;
+    height: 68px;
     margin-right: 20px;
-}
-.programLang> span:nth-child(1){
-    background-color: var(--blue);
-    width: 5px;
-    height: 5px;
+  }
+  .profileReposColHeader {
+    flex-direction: column;
+  }
+  .profileReposColHeader > div {
+    margin-top: 10px;
+  }
+  .profileReposColHeader details {
+    flex: 0.25;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .profileReposColHeader .new {
+    margin-left: auto;
+    padding: 5px;
+    font-size: 14px;
+  }
 }

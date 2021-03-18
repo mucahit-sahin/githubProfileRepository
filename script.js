@@ -40,7 +40,7 @@ function getGithubRepos() {
         repoList.push(repo);
         var repositoryElement = `<div class="repository">
         <div class="repositoryHeader">
-            <span>${repo.name}</span>
+            <a href="${repo.html_url}">${repo.name}</a>
             <div>
                 <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16"
                     height="16" aria-hidden="true">
@@ -89,7 +89,7 @@ searchInput.addEventListener("input", (e) => {
   filterList.map((repo) => {
     var repositoryElement = `<div class="repository">
     <div class="repositoryHeader">
-        <span>${repo.name}</span>
+        <a>${repo.name}</a>
         <div>
             <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16"
                 height="16" aria-hidden="true">
@@ -121,4 +121,13 @@ searchInput.addEventListener("input", (e) => {
 </div>`;
     profileRepositories.innerHTML += repositoryElement;
   });
+});
+
+/* Mobile Menu Open */
+
+var menuButtonDiv = document.querySelector(".menu");
+var menuButton = document.querySelector(".mobileMenu button");
+
+menuButton.addEventListener("click", () => {
+  menuButtonDiv.classList.toggle("active");
 });

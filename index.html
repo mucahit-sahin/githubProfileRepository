@@ -14,6 +14,26 @@
 <body>
     <div class="container">
         <nav>
+            <div class="menu">
+                <ul>
+                    <div class="searchInput">
+                        <input type="text" placeholder="Search or jump to" />
+                        <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" />
+                    </div>
+                    <li>Dashboard</li>
+                    <li>Pull requests</li>
+                    <li>Issues</li>
+                    <li>Issues</li>
+                    <li>Marketplace</li>
+                    <li>Explore</li>
+                    <li>Sponsors</li>
+                    <li>Settings</li>
+                    <li>mucahit-sahin</li>
+                </ul>
+            </div>
+            <div class="mobileMenu">
+                <button><i class="fas fa-bars"></i></button>
+            </div>
             <div class="githubLogo">
                 <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
                     width="32" aria-hidden="true">
@@ -75,6 +95,7 @@
                         <i class="fas fa-arrow-down"></i>
                     </summary>
                     <ul>
+
                         <li>Signed in as mucahit-sahin</li>
                         <li>Your profile</li>
                         <li>Your repositories</li>
@@ -88,9 +109,11 @@
         </nav>
         <div class="content">
             <div class="profileBio">
-                <img
-                    src="https://avatars.githubusercontent.com/u/38807255?s=460&u=8ee99c52ebe6d81d3a8bb733d05ec38ad7c7f921&v=4" />
-                <span class="profileBioUsername">mucahit-sahin</span>
+                <div>
+                    <img
+                        src="https://avatars.githubusercontent.com/u/38807255?s=460&u=8ee99c52ebe6d81d3a8bb733d05ec38ad7c7f921&v=4" />
+                    <span class="profileBioUsername">mucahit-sahin</span>
+                </div>
                 <button class="editProfileButton">
                     Edit profile
                 </button>
@@ -161,14 +184,16 @@
             <div class="profileReposCol">
                 <div class="profileReposColHeader">
                     <input type="text" placeholder="Find a repository" />
-                    <details>
-                        <summary>Type: All</summary>
-                    </details>
-                    <details>
-                        <summary>Language: All</summary>
-                    </details>
                     <div>
-                        <span>New</span>
+                        <details>
+                            <summary>Type: All</summary>
+                        </details>
+                        <details>
+                            <summary>Language: All</summary>
+                        </details>
+                        <div class="new">
+                            <span>New</span>
+                        </div>
                     </div>
                 </div>
                 <div class="profileRepositories">
