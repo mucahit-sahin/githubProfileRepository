@@ -89,7 +89,7 @@ searchInput.addEventListener("input", (e) => {
   filterList.map((repo) => {
     var repositoryElement = `<div class="repository">
     <div class="repositoryHeader">
-        <a>${repo.name}</a>
+       <a href="${repo.html_url}">${repo.name}</a>
         <div>
             <svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16"
                 height="16" aria-hidden="true">
