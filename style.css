@@ -380,6 +380,20 @@ nav .fa-arrow-down {
     color: white;
     padding: 10px;
     margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .menu img {
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .menu .fa-sign-out-alt {
+    margin-right: 5px;
+  }
+  .menu ul li {
+    display: flex;
+    align-items: center;
   }
   .menu .searchInput {
     margin-left: 0px;
