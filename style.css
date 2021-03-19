@@ -257,7 +257,7 @@ nav .fa-arrow-down {
   fill: #c9d1d9;
   margin-right: 5px;
 }
-.profileLinks span {
+.profileLinks > div {
   display: flex;
   align-items: center;
   font-size: 14px;
