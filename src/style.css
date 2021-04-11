@@ -4,6 +4,7 @@
   --nav-bg-color: #161b22;
   --blue: #388bfd;
   --border-color: #21262d;
+  --gray: #8b949e;
 }
 
 * {
@@ -11,6 +12,9 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Roboto";
+}
+html {
+  font-size: 62.5%;
 }
 body {
   min-height: 100vh;
@@ -22,7 +26,7 @@ nav {
   flex-direction: row;
   align-items: center;
   flex: 1;
-  padding: 10px 40px 10px 30px;
+  padding: 1rem 4rem 1rem 3rem;
   background-color: var(--nav-bg-color);
 }
 .mobileMenu {
@@ -44,20 +48,20 @@ nav {
   background-color: var(--main-bg-color);
   display: flex;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 1.5rem;
   position: relative;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .searchInput input {
   background-color: transparent;
   color: white;
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 1.4rem;
   height: 100%;
   width: 270px;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   transition: width 0.3s linear;
 }
 .searchInput input:focus {
@@ -73,10 +77,10 @@ nav {
 .navLink a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   font-family: "Roboto";
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 .navLink a:hover {
   color: gray;
@@ -94,8 +98,9 @@ nav {
   fill: white;
 }
 .navActionMenu {
-  margin-right: 15px;
+  margin-right: 1.5rem;
   position: relative;
+  font-size: 1.4rem;
 }
 .navActionMenu > summary::-webkit-details-marker {
   display: none;
@@ -105,7 +110,7 @@ nav {
 }
 nav .fa-arrow-down {
   color: white;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 .navActionMenu ul,
@@ -144,6 +149,11 @@ nav .fa-arrow-down {
   display: flex;
   align-items: center;
   position: relative;
+  font-size: 1.4rem;
+}
+.navProfileAvatar > summary {
+  display: flex;
+  align-items: center;
 }
 .navProfileAvatar > summary::-webkit-details-marker {
   display: none;
@@ -153,16 +163,25 @@ nav .fa-arrow-down {
   height: 20px;
   border-radius: 50%;
 }
-
+/*Not Found*/
+.notFound {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--gray);
+}
 /*Tabs*/
 
 .tabs {
   display: flex;
   flex-direction: row;
   flex: 1;
-  color: #8b949e;
+  color: var(--gray);
   border-bottom: 0.5px solid #21262d;
   margin-top: 30px;
+  font-size: 1.4rem;
 }
 .tabs > div:nth-child(1) {
   flex: 0.3;
@@ -216,9 +235,14 @@ nav .fa-arrow-down {
 }
 .profileBioUsername {
   margin-top: 15px;
-  font-size: 20px;
-  color: #8b949e;
+  font-size: 2rem;
+  color: var(--gray);
   font-weight: 300;
+}
+.bioText {
+  color: #c9d1d9;
+  font-size: 1.4rem;
+  margin-top: 15px;
 }
 .editProfileButton {
   background-color: #21262d;
@@ -237,10 +261,10 @@ nav .fa-arrow-down {
   align-items: center;
   color: #c9d1d9;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .profileFollow svg {
-  fill: #8b949e;
+  fill: var(--gray);
 }
 .profileFollow span {
   color: white;
@@ -260,7 +284,7 @@ nav .fa-arrow-down {
 .profileLinks > div {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: 5px;
 }
 .highlights {
@@ -272,12 +296,12 @@ nav .fa-arrow-down {
   border-bottom: 0.5px solid #21262d;
 }
 .highlights span:nth-child(1) {
-  font-size: 20px;
+  font-size: 2rem;
   display: flex;
   align-items: center;
 }
 .highlights span:nth-child(2) {
-  font-size: 14px;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
 }
@@ -295,7 +319,7 @@ nav .fa-arrow-down {
   border-radius: 10px;
   width: min-content;
   padding: 0px 5px;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #8957e5;
 }
 .profileReposCol {
@@ -311,7 +335,7 @@ nav .fa-arrow-down {
   flex: 0.6;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid #21262d;
+  border: 3px solid #21262d;
   outline: none;
   background-color: transparent;
   margin-right: 10px;
@@ -333,6 +357,7 @@ nav .fa-arrow-down {
   justify-content: center;
   height: 100%;
   outline: none;
+  font-size: 1.4rem;
 }
 .profileReposColHeader details summary::-webkit-details-marker {
   display: none;
@@ -350,6 +375,7 @@ nav .fa-arrow-down {
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 1.4rem;
 }
 .profileRepositories {
   display: flex;
@@ -370,7 +396,7 @@ nav .fa-arrow-down {
 }
 .repositoryHeader > a {
   color: var(--blue);
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -388,22 +414,22 @@ nav .fa-arrow-down {
   height: 25px;
   width: 70px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .repositoryHeader div svg {
-  fill: #8b949e;
+  fill: var(--gray);
 }
 .repositoryDescription {
-  color: #8b949e;
-  font-size: 14px;
+  color: var(--gray);
+  font-size: 1.4rem;
   max-width: 500px;
 }
 .repositoryInfo {
   margin-top: 15px;
   display: flex;
   flex-direction: row;
-  color: #8b949e;
-  font-size: 12px;
+  color: var(--gray);
+  font-size: 1.2rem;
 }
 .programLang {
   margin-right: 20px;
@@ -435,7 +461,7 @@ nav .fa-arrow-down {
   }
   .mobileMenu .fas {
     color: white;
-    font-size: 23px;
+    font-size: 2.3rem;
   }
   .menu.active {
     display: block;
@@ -445,7 +471,7 @@ nav .fa-arrow-down {
     color: white;
     padding: 10px;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 600;
   }
   .menu img {
@@ -515,12 +541,12 @@ nav .fa-arrow-down {
   .profileReposColHeader details {
     flex: 0.25;
     padding: 5px;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
   .profileReposColHeader .new {
     margin-left: auto;
     padding: 5px;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
   .repositoryHeader > a {
     max-width: 200px;
